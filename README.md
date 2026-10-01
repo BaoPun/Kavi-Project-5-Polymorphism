@@ -31,6 +31,13 @@ The Wumpus is the main boss in this game, and they are trying to stop the advent
 ## None
 The default event is that there is none.  To emulate polymorphic behavior, a "None" room represents a room that does not contain an Event.  
 
+# Recommended Order of Classes
+I would recommend working on the Event class first, followed by the child classes as described above.  If you did the child classes right, then they should all look very similar to each other; the only difference is the percept message for each derived Event.  
+
+After that, work on the Board class.  Pay careful attention to the functions that were already done for you, as you will need to use some of those techniques to help you with this project.  
+
+Finally, work on the Game class.  You will likely find that a lot of functions you will need to be called from the Board class, so many of the game class functions will end up being a one liner that will call a function from the Board class.  Thus, you may need to add additional helper functions if you feel you need more.  
+
 # Requirements
 ## Part 1
 Implement the Hunt the Wumpus game, as specified in the above sections.  You will be given all the necessary files to complete this task, along with functions in each to help you out.  Importantly, I have done the maze generation for you already in "board.hpp" and "board.cpp", so you do not need to worry about making the maze full of events.  You will also need to figure out what the game loop will look like, but here is a basic outline: show the map, choose an action, choose a movement, trigger an event based on said action.  Repeat the game loop while the player has not won, has not lost, or has not chosen to quit.  
